@@ -1,0 +1,2 @@
+- [the website to learn ASCII](https://www.asciihex.com/)
+- [the website about UNICODE](https://home.unicode.org/)
