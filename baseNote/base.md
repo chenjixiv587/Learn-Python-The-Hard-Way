@@ -1,2 +1,4 @@
 - [the website to learn ASCII](https://www.asciihex.com/)
 - [the website about UNICODE](https://home.unicode.org/)
+- [python3 encode and decode string](https://www.datasciencemadesimple.com/encode-and-decode-a-string-in-python/#:~:text=Encode%20and%20Decode%20string%20in%20python%20%E2%80%93%20Encode,input%20to%20the%20decode%20function%201%202%20)
+- [Standard Encodings](https://docs.python.org/3/library/codecs.html#standard-encodings)
