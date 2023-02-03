@@ -2,17 +2,6 @@ from nose.tools import *
 from ex47.game import Room
 
 
-def setup():
-    print("SETUP!")
-
-def teardown():
-    print("TEAR DOWN")
-
-def test_basic():
-    print("I RAN!")
-
-
-
 def testRoom():
     gold = Room("GoldRoom", """This room has gold in it
     and you can grab. There's a door to the north.""")
@@ -26,5 +15,21 @@ def testRoomPaths():
     south = Room("South", "Test room in the south")
 
     center.addPaths({"north":north, "south":south})
-    assert_equal()
+    assert_equal(center.go("north"), north)
+    assert_equal(center.go("south"), south)
+
+def testMap():
+    start = Room("Start", "You can go west and down a hole.")
+    west = Room("Trees", "There are trees here, you can go east")
+    down = Room("Dungeon", "It is dark down here you can go up")
+
+    start.addPaths({"west": west, "down":down})
+    west.addPaths({"east": start})
+    down.addPaths({"up": start})
+
+    assert_equal(start.go("west"), west)
+    assert_equal(start.go("west").go("east"), start)
+    assert_equal(start.go("down").go("up"), start)
+
+    
 
